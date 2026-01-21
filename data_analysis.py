@@ -232,7 +232,7 @@ fig1 = px.bar(
     labels={"x": "Rating", "y": "Count"},
     title="Rating distribution",
 )
-st.plotly_chart(fig1, width=True)
+st.plotly_chart(fig1, width='stretch')
 
 avg_val = df.groupby("Rating")["Transaction Value"].mean().reset_index()
 fig2 = px.bar(
@@ -242,7 +242,7 @@ fig2 = px.bar(
     labels={"Transaction Value": "Avg transaction ($)"},
     title="Average transaction value by rating",
 )
-st.plotly_chart(fig2, width=True)
+st.plotly_chart(fig2, width='stretch')
 
 if df["Date"].notna().any():
     daily = (
@@ -259,7 +259,7 @@ if df["Date"].notna().any():
         labels={"value": "Value", "variable": "Metric"},
         title="Daily trend: rating and spend",
     )
-    st.plotly_chart(fig3, width=True)
+    st.plotly_chart(fig3, width='stretch')
 
 top_loc = (
     df.groupby("Location")
@@ -277,7 +277,7 @@ if not top_loc.empty:
         title="Top locations by average rating (>=5 responses)",
         labels={"avg_rating": "Avg rating"},
     )
-    st.plotly_chart(fig4, width=True)
+    st.plotly_chart(fig4, width='stretch')
 
 # Words
 words, counts = top_words(df["Comment"])
@@ -288,7 +288,7 @@ if words:
         labels={"x": "Word", "y": "Count"},
         title="Top words in comments",
     )
-    st.plotly_chart(fig_words, width=True)
+    st.plotly_chart(fig_words, width='stretch')
 
 # Narrative summary (target 250-400 words)
 st.markdown("### AI-style summary and action points")
