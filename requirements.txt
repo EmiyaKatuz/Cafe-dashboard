@@ -1,7 +1,8 @@
 ﻿plotly
 pandas
 altair
-streamlit==1.52.0
+streamlit==1.53.0
 standard-imghdr
+
 
 
