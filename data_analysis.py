@@ -167,7 +167,7 @@ def build_narrative(df: pd.DataFrame, base_len: int, words):
 
 
 @st.cache_data
-def to_csv_bytes(df: pd.DataFrame):
+def to_csv_bytes(_df: pd.DataFrame):
     return df.to_csv(index=False).encode("utf-8")
 
 
