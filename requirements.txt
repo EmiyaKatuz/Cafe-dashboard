@@ -2,4 +2,4 @@
 pandas
 altair<5
 streamlit
-
+standard-imghdr
