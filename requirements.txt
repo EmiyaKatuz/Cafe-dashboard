@@ -1,6 +1,5 @@
 ﻿plotly
 pandas
-altair<5
-streamlit<=1.52.0
+altair
+streamlit
 standard-imghdr
-
